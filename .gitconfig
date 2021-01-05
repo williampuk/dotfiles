@@ -3,6 +3,7 @@
 	email = 
 [core]
 	editor = vim
+	autocrlf = true
 [color]
 	diff = auto
 	ui = true
@@ -12,6 +13,14 @@
 	st = status -sb
 	br = branch
 	gr = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+        showhistory = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) - %C(bold white)%an%C(reset) %C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --full-history --simplify-merges
+        filechange = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) - %C(bold white)%an%C(reset) %C(bold yellow)%d%C(reset) %w0' --abbrev-commit --date=relative --name-status
+        rb = rebase
+        ri = rebase -i
+        ss = show --stat --summary
+        dc = diff-tree --no-commit-id --name-only -r
+        dw = diff --color-words
+        dws = diff --ws-error-highlight=new,old
 [diff]
 	tool = meld
 [merge]
